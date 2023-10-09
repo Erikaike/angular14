@@ -1,0 +1,43 @@
+<div formGroup="newUserForm">
+    <label>
+        Username:
+        <input type="text"  name="username" formControlName="username">
+        {{ username.value }}
+    </label>
+    <label>
+        Email:
+        <input type="email" formControl="email">
+        
+    </label>
+    <label>
+        Password:
+        <input type="password" formControl="password">
+        
+    </label>
+    <label>
+        Street:
+        <input type="text" formControl="street">
+        
+    </label>
+    <label>
+        Post code:
+        <input type="text" formControl="postCode">
+        
+    </label>
+    <label>
+        City:
+        <input type="text" formControl="city">
+    </label>
+    <button type="submit"  (click)="onSubmit()">Register</button>
+    <div class="newUserValidated">
+        <div *ngIf="submitted">
+            New user :
+            {{ username.value }}
+            {{ email.value }}
+            {{ password.value }}
+            {{ street.value }}
+            {{ postCode.value }}
+            {{ city.value }}
+        </div>
+    </div>
+</div>
