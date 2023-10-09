@@ -6,22 +6,18 @@
     <label>
         Email:
         <input type="email" formControl="email">
-        
     </label>
     <label>
         Password:
         <input type="password" formControl="password">
-        
     </label>
     <label>
         Street:
         <input type="text" formControl="street">
-        
     </label>
     <label>
         Post code:
         <input type="text" formControl="postCode">
-        
     </label>
     <label>
         City:
@@ -30,6 +26,7 @@
     <button type="submit">Register</button>
     <div class="newUserValidated">
         <div *ngIf="submitted">
+            <div *ngFor="let userInfo of newUser" ></div>
             New user :
             {{ user.username }}
             {{ user.email }}

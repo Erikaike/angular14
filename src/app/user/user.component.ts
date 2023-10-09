@@ -12,7 +12,7 @@ export class UserComponent implements OnInit {
 
   submitted: boolean = false;
   user = new User('','','',{street:'',postCode:'',city:''});
-  users!: User[];
+  newUser!: User[];
 
   newUserForm = this.fb.group({
     username: new FormControl(''),
@@ -33,6 +33,6 @@ export class UserComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     const newUser = this.newUserForm.value;
-    console.log(this.user);
+    console.log(newUser);
   }
 }
