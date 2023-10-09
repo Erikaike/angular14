@@ -1,8 +1,7 @@
-<div formGroup="newUserForm">
+<div formGroup="newUserForm" (ngSubmit)="onSubmit()">
     <label>
         Username:
         <input type="text"  name="username" formControlName="username">
-        {{ username.value }}
     </label>
     <label>
         Email:
@@ -28,16 +27,16 @@
         City:
         <input type="text" formControl="city">
     </label>
-    <button type="submit"  (click)="onSubmit()">Register</button>
+    <button type="submit">Register</button>
     <div class="newUserValidated">
         <div *ngIf="submitted">
             New user :
-            {{ username.value }}
-            {{ email.value }}
-            {{ password.value }}
-            {{ street.value }}
-            {{ postCode.value }}
-            {{ city.value }}
+            {{ user.username }}
+            {{ user.email }}
+            {{ user.password }}
+            {{ user.address.street }}
+            {{ user.address.postCode }}
+            {{ user.address.city }}
         </div>
     </div>
 </div>
